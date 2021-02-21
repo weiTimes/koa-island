@@ -2,6 +2,14 @@
 
 使用koa开发的微信小程序的服务端项目，包含了完整的开发流程与业务逻辑。
 
+### 技术栈
+
+- [x] koa
+- [x] mysql
+- [x] sequelize
+- [x] nodemon
+- [x] validator
+
 ## 使用
 
 ### 克隆项目
