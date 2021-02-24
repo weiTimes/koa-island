@@ -19,6 +19,18 @@ class User extends Model {
 
     return user;
   }
+
+  // 查询数据库中具有相同 openid 的用户
+  static async getUserByOpenid(openid) {
+    const user = await User.findOne({ where: { openid } });
+
+    return user;
+  }
+
+  // 使用 openid 创建一个用户
+  static async createUserByOpenid(openid) {
+    return await User.create({ openid });
+  }
 }
 
 // 生成表

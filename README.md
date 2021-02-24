@@ -15,7 +15,7 @@
 ### 克隆项目
 
 ```shell
-git clone
+git clone https://github.com/weiTimes/koa-island.git
 ```
 
 ### 安装依赖

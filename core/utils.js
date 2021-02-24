@@ -29,9 +29,16 @@ const findMembers = function (instance, { prefix, specifiedType, filter }) {
   return _find(instance);
 };
 
+/**
+ *
+ * @param {*} uid 用户id
+ * @param {*} scope 实现权限
+ */
 const generateToken = function (uid, scope) {
   const secretKey = global.config.security.secretKey;
   const expiresIn = global.config.security.expiresIn;
+
+  // sign => 生成令牌 params: 自定义信息、私钥、可选配置项
   const token = jwt.sign(
     {
       uid,
@@ -42,6 +49,7 @@ const generateToken = function (uid, scope) {
       expiresIn,
     }
   );
+
   return token;
 };
 
